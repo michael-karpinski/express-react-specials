@@ -7,7 +7,7 @@ var options = {
 
 app.use('/', express.static('public', options));
 
-var server = app.listen(8000, function () {
+var server = app.listen(process.env.PORT || 8000, function () {
     var host = server.address().address;
     var port = server.address().port;
 
